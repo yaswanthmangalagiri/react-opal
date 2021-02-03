@@ -59,7 +59,7 @@ class Home extends React.Component{
 			<div>
 				
 			{
-				this.state.showSlotDetails ? <SlotDetails data = { JSON.parse(localStorage.getItem(this.state.slotId)) } /> : <div><div className = "heading ver-padding ver-margin" >Slots Booking</div><ul className="col-90 margin-auto">{this.parseSlots()}</ul></div>
+				this.state.showSlotDetails ? <SlotDetails data = { JSON.parse(localStorage.getItem(this.state.slotId)) } /> : <div><div className = "heading ver-padding ver-margin" >Slot Booking</div><ul className="col-45 margin-auto">{this.parseSlots()}</ul></div>
 			}
 			</div>
 		) 

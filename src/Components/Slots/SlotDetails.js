@@ -22,31 +22,27 @@ class SlotDetails extends React.Component{
 
 	render(){
 		return(
-			<div className="align-left col-50 margin-auto" >
+			<div className="col-50 margin-auto" >
 				<div className="heading ver-margin ver-padding">Booking Confimation</div>
 				<div className="large faded-text ver-margin">
 					<span>Time </span>
 					<b>{this.props.data.name}</b>
 				</div>
-				<div className="box-shadow hor-ver-padding col-80 ">
+				<div className="box-shadow hor-ver-padding col-80 margin-auto ">
 					<div className="x-large ver-margin align-center bold">User Details</div>
 					<div className="col-90 ver-padding margin-auto">
-						<div className="col-100">
-							<div className="col-45 inline">
+						<div className="col-100 align-left">
+							<div className="col-45 inline margin-right">
 								<div className="small faded-text">First name</div>
-								<div>
-									<input ref = "firstName" className="margin-right" placeholder = "First Name" defaultValue = { (this.props.data.details.firstName !== undefined) ? this.props.data.details.firstName : "" } />
-								</div>
+								<input ref = "firstName" className="margin-right col-100" placeholder = "First Name" defaultValue = { (this.props.data.details.firstName !== undefined) ? this.props.data.details.firstName : "" } />
 							</div>
 							<div className="col-45 inline">
 								<div className="small faded-text">Last name</div>
-								<div>
-									<input ref = "lastName" className="" placeholder = "Last Name" defaultValue = { (this.props.data.details.lastName !== undefined) ? this.props.data.details.lastName : "" } />
-								</div>
+									<input ref = "lastName" className="col-100" placeholder = "Last Name" defaultValue = { (this.props.data.details.lastName !== undefined) ? this.props.data.details.lastName : "" } />
 							</div>
 						</div>
 						<div className="col-45 ver-margin">
-							<div className="small faded-text">Phone Number</div>
+							<div className="small faded-text align-left">Phone Number</div>
 							<input ref = "phoneNumber" className="col-100" placeholder = "Phone Number" defaultValue = { (this.props.data.details.phoneNumber !== undefined) ? this.props.data.details.phoneNumber : "" }/>
 							</div>
 					</div>

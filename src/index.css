@@ -223,10 +223,9 @@ select{
 	display: block;
 }
 
-.free {
-}
 .booked{
   background: red;
+  color: white;
 }
 .error{
     color:red;
@@ -239,6 +238,9 @@ select{
     display: block;
 }
 
+.float-left{
+  float: left;
+}
 .inline{
 	display: inline-block;
 }
@@ -281,12 +283,14 @@ select{
 }
 
 .confirm-btn{
- background: blue;
- color: white;
+   background: blue;
+   color: white;
 }
-
+.faded-text{
+  color:grey;
+}
 .ver-margin{
-  margin: 21px 0px;
+  margin: 15px 0px;
 }
 
 .neutral-btn{

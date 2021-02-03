@@ -13,9 +13,10 @@ class Slot extends React.Component{
 
 	render(){
 		return(
-			<li id = {this.props.data.id} className="flex-center hor-ver-margin pointer align-center">
-				<div className="timings margin-right medium">{this.props.data.name}</div>
-				<div className = {"col-80 border-style " + (this.props.data.isBooked ?  "booked" : "free" )} style = {{height: '30px'}} onClick = {() => this.handleBooking() } > </div>
+			<li id = {this.props.data.id} className="hor-ver-margin pointer">
+				<div className = {"align-center border-style " + (this.props.data.isBooked ?  "booked" : "free" )} style = {{height: '30px', padding: '10px'}} onClick = {() => this.handleBooking() } >
+					<span className="vertical-middle">{this.props.data.name}</span>
+				</div>
 			</li>
 		)
 	}
