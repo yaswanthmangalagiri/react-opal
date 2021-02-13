@@ -1,0 +1,18 @@
+import React from 'react';
+
+class Tab extends React.Component{
+
+	constructor(props){
+		super(props)
+	}
+
+	render(){
+		return(
+			<div className="align-left" style = {{padding:'3%'}} >
+				<div className = "x-large bold" >Tab{this.props.id} Contents</div>
+			</div>
+		) 
+	}
+}
+
+export default Tab;

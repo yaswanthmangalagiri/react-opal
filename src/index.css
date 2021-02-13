@@ -9,9 +9,9 @@ body {
 
 button{
     border:0px;
-    padding: 10px;
+    background: none;
+    padding: 2px;
     font-weight: 600;
-    font-size: 15px;
     cursor: pointer;
     border-radius: 4px;
 }
@@ -61,14 +61,11 @@ select{
    width: calc(100% - 125px);
 }
 
-.box-shadow{
-  box-shadow: -1px 1px 4px 0px #565656;
+.icon{
+    height: 16px;
+    padding: 10px;
 }
 
-.border-style{
-   border-radius: 8px;
-   border: 1px solid grey;
-}
 .bold{
     font-weight: 600;
 }
@@ -163,38 +160,16 @@ select{
   display: inline-flex;
 }
 
-.col-8{
-    width: 8%;
+.col-3{
+    width: 3%;
 }
-.col-10{
-    width: 10%;
-}
-.col-15{
-    width: 15%;
-}
+
 .col-20{
     width: 20%;
 }
 .col-30{
     width: 30%;
 }
-.col-35{
-    width: 35%;
-}
-.col-40{
-    width: 40%;
-}
-.col-45{
-	width: 45%;
-}
-.col-50{
-	width: 50%;
-}
-
-.col-80{
-    width: 80%;
-}
-
 .col-85{
     width: 85%;
 }
@@ -241,6 +216,9 @@ select{
 .float-left{
   float: left;
 }
+.float-right{
+  float: right;
+}
 .inline{
 	display: inline-block;
 }
@@ -271,41 +249,13 @@ select{
   right: -7px;
   height: 10px;
 }
-.toast{
-    width: 95%;
-    position: absolute;
-    bottom: 40%;
-    padding: 10px;
-    color: white;
-}
-.toast-success{
-  background: green;
+.none{
+  opacity: 0;
 }
 
-.confirm-btn{
-   background: blue;
-   color: white;
+.tab-active{
+  border-bottom: 3px solid #20adff;
 }
-.faded-text{
-  color:grey;
-}
-.ver-margin{
-  margin: 15px 0px;
-}
-
-.neutral-btn{
- background: white;
- color: black;
-}
-
-.timings{
-    width: 130px;
- }
-.dialog-title{
-    background: #565353;
-    color: white;
-    padding: 3px 6px;
-} 
 
 @media (min-width: 320px) and (max-width: 767px){
   .home-inline-flex{
