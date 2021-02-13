@@ -9,7 +9,7 @@ class Tab extends React.Component{
 	render(){
 		return(
 			<div className="align-left" style = {{padding:'3%'}} >
-				<div className = "x-large bold" >Tab{this.props.id} Contents</div>
+				<div className = "x-large bold" >Tab{this.props.activeTab} Contents</div>
 			</div>
 		) 
 	}

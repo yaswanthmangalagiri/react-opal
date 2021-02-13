@@ -120,7 +120,7 @@ class Container extends React.Component{
 							<img className="icon" src = "add.svg" onClick = {() => this.addNewTab() } />
 					</button>
 				</div>
-				<TabContent />
+				<TabContent activeTab = {this.state.activeTab} />
 			</div>
 		)
 	}
