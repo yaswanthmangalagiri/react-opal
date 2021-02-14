@@ -45,7 +45,7 @@ class Container extends React.Component{
 			console.log(this.refs.tabList.children[i])
 			this.refs.tabList.children[i].classList.remove("tab-active")
 		}
-		this.refs.tabList.children[id-1].classList.add("tab-active")
+		this.refs.tabList.children[this.findIndex(id)].classList.add("tab-active")
 		this.setState({activeTab: id})
 	}
 
@@ -72,11 +72,13 @@ class Container extends React.Component{
 
 	dropped = () => {
 		let tabsArr = this.state.tabs
-		console.log("Dropped", tabsArr[this.draggedIndex], tabsArr[this.overIndex] )
-		let temp = tabsArr[this.overIndex]
-		tabsArr[this.overIndex] = tabsArr[this.draggedIndex]
-		tabsArr[this.draggedIndex] = temp
-		this.setState({tabs: tabsArr})
+		if(this.draggedIndex !== undefined && this.overIndex !== undefined )
+		{
+			let temp = tabsArr[this.overIndex]
+			tabsArr[this.overIndex] = tabsArr[this.draggedIndex]
+			tabsArr[this.draggedIndex] = temp
+			this.setState({tabs: tabsArr})
+		}
 	}
 
 	parseTabs = (count) => {
@@ -106,18 +108,18 @@ class Container extends React.Component{
 
 	render(){
 		return(
-			<div>
-				<div className="heading hor-ver-padding align-left">Demo Container</div>
+			<div className= "align-left">
+				<div className="heading hor-ver-padding">Demo Container</div>
 				<div className="flex" style = {{background: "#efeeee"}}>
-					<button className="col-3 inline">
-						<img ref = "left" src= "arrow.svg" className="icon none" onClick = {() => this.scrollTabs(-150) } />
-					</button>
-					<ul style = {{overflow: 'hidden', whiteSpace: 'nowrap' }} ref= "tabList" onDragOver = {(e)=>this.dragOver(e,this.props.id)} onDrop = {()=>this.dropped()} className = "align-left inline col-90" >{this.parseTabs(this.state.tabsCount)}</ul>
-					<button className="col-3 inline" >
-						<img ref = "right" src= "arrow.svg" className="icon none" style = {{verticalAlign: 'bottom', height: '15px'}} onClick = {() => this.scrollTabs(150) } />
-					</button>
-					<button className="col-3 inline" >
-							<img className="icon" src = "add.svg" onClick = {() => this.addNewTab() } />
+					<div className="col-5 inline ver-padding align-center">
+						<img style = {{transform: 'rotate(180deg)'}} ref = "left" src= "arrow.svg" className="icon pointer none" onClick = {() => this.scrollTabs(-200) } />
+					</div>
+					<ul style = {{overflow: 'hidden', whiteSpace: 'nowrap' }} ref= "tabList" onDragOver = {(e)=>this.dragOver(e,this.props.id)} onDrop = {()=>this.dropped()} className = "align-left inline col-100" >{this.parseTabs(this.state.tabsCount)}</ul>
+					<div className="col-5 inline ver-padding align-center" >
+						<img ref = "right" src= "arrow.svg" className="icon none pointer" style = {{verticalAlign: 'bottom', height: '15px'}} onClick = {() => this.scrollTabs(200) } />
+					</div>
+					<button className="col-5 inline" >
+						<img className="icon pointer" src = "add.svg" onClick = {() => this.addNewTab() } />
 					</button>
 				</div>
 				<TabContent activeTab = {this.state.activeTab} />

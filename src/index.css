@@ -62,8 +62,7 @@ select{
 }
 
 .icon{
-    height: 16px;
-    padding: 10px;
+    height: 17px;
 }
 
 .bold{
@@ -72,9 +71,6 @@ select{
 
 .hor-ver-margin{
     margin: 8px;
-}
-.hor-margin{
-    margin: 0px 15px;
 }
 
 .hor-padding{
@@ -160,18 +156,17 @@ select{
   display: inline-flex;
 }
 
-.col-3{
-    width: 3%;
-}
-
+.col-5{
+    width: 5%;
+ }
 .col-20{
     width: 20%;
 }
 .col-30{
     width: 30%;
 }
-.col-85{
-    width: 85%;
+.col-80{
+    width: 80%;
 }
 
 .col-90{
@@ -194,21 +189,6 @@ select{
     width: 100%;
 }
 
-.display{
-	display: block;
-}
-
-.booked{
-  background: red;
-  color: white;
-}
-.error{
-    color:red;
-}
-
-.none{
-	display: none;
-}
 .show{
     display: block;
 }
@@ -306,8 +286,8 @@ select{
   .margin-left{
     margin-left: 4px;
   }
-   .col-8{
-      width: 20%;
+   .col-5{
+      width: 5%;
    }
    .col-30 {
       width: 85%;
@@ -330,14 +310,8 @@ select{
    .col-50{
       width: 100%;
    }
-   .col-60{
-    width: 90%;
-   }
-   .col-74{
-    width: 74%;
-   }
-   .col-92{
-    width: 90%;
+   .col-80{
+    width: 80%;
    }
 }
 
