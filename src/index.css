@@ -8,9 +8,8 @@ body {
 }
 
 button{
-    border:0px;
-    background: none;
-    padding: 2px;
+    border: 1px solid grey;
+    padding: 5px;
     font-weight: 600;
     cursor: pointer;
     border-radius: 4px;
@@ -44,12 +43,14 @@ ul{
 
 input{
     padding: 4px 3px;
+    margin-bottom: 5px;
     font-size: 15px;
 }
 
 input::placeholder{
   color:darkgrey;
 }
+
 select{
     border-radius: 4px;
     padding: 1px;
@@ -72,7 +73,9 @@ select{
 .hor-ver-margin{
     margin: 8px;
 }
-
+.ver-margin{
+  margin: 8px 0px;
+}
 .hor-padding{
     padding: 0px 10px;
 }
@@ -91,6 +94,9 @@ select{
 .medium{
     font-size: 17px;
 }
+ .small{
+      font-size: 14px;
+   }
 
 .label-margin{
     margin: 0px 10px 0px 0px;
@@ -165,6 +171,12 @@ select{
 .col-30{
     width: 30%;
 }
+.col-33{
+    width: 33%;
+}
+.col-45{
+    width: 45%;
+}
 .col-80{
     width: 80%;
 }
@@ -193,6 +205,11 @@ select{
     display: block;
 }
 
+.border-style{
+  border: 3px solid lightgrey;
+  border-radius: 7px;
+}
+
 .float-left{
   float: left;
 }
@@ -210,7 +227,6 @@ select{
 .vertical-middle{
   vertical-align: middle;
 }
-
 
 #priority{
 	width: 10%;
