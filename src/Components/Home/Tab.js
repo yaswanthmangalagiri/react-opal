@@ -1,27 +1,37 @@
-import React from 'react';
+import React from "react";
 
-class TabContent extends React.Component{
+class AutoSearch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      results: ["GGGGG", "GGEEEEE", "EDFSD"],
+      searched: "",
+      filtered: []
+    };
+  }
 
-	constructor(props){
-		super(props)
-	}
+  openDropDown = (value) => {
+    let filteredRes = this.state.results.filter((r) => {
+      
+      if (r.includes(value)) {
+        return r;
+      }
+    });
+    this.setState({filtered: filteredRes});
+  };
 
-	tabActive = (target, id) => {
-		this.props.changeTab(id)
-	}
-	componentDidMount
-	componentDidUpdate(prevProps){
+  parseDropDown = () => {
+    return this.state.filtered.map((r) => <div>{r}</div>);
+  };
 
-	}
-
-	render(){
-		return(
-			<li onDragOver = {(e)=>this.props.dragOver(e,this.props.id)} id = {this.props.id} className={ (this.props.activeTab === this.props.id ? "tab-active": null) + " col-20 align-center medium bold inline hor-ver-padding"}  draggable = {true} onDrag = {() => this.props.dragging(this.props.id)} onClick = {(e) => this.tabActive(e.target, this.props.id)}>
-					<span style = {{ verticalAlign: 'middle'}} >Tab{this.props.id}</span>
-				<img src = "close.svg" className="icon float-right" onClick = {(e) => this.props.closeTab(e, this.props.id) } />
-			</li>
-		) 
-	}
+  render() {
+    return (
+      <div>
+        <input onKeyUp={(e) => this.openDropDown(e.target.value)} />
+        {this.state.searched}
+        {this.parseDropDown()}
+      </div>
+    );
+  }
 }
-
-export default TabContent;
+export default AutoSearch;
